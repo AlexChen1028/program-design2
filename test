@@ -1,4 +1,0 @@
-int[] A = {1, 2, 3};
-int[] B = A;
-A[0]=0;
-System.out.println(B[0]); //B[0]是1還是0？
