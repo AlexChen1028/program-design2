@@ -166,7 +166,6 @@ class TFIDF {
                     termInDocCount++;
                 }
             }
-
             exist = Math.log((double) docCount / termInDocCount);
             documentExist.put(term, exist);
         }
