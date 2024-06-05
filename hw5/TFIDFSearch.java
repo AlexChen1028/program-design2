@@ -8,11 +8,13 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.FileInputStream;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 import java.lang.Math;
+import java.util.HashSet;
 
 
 public class TFIDFSearch {
@@ -26,6 +28,7 @@ public class TFIDFSearch {
     }
 
     // 從文件中載入文檔
+    @SuppressWarnings("unchecked")
     private void loadDocuments(String indexFilePath) {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(indexFilePath))) {
             Map<Integer, List<String>> serializedData = (Map<Integer, List<String>>) ois.readObject();
